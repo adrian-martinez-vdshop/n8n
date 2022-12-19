@@ -862,6 +862,7 @@ importers:
       lodash.merge: ^4.6.2
       lodash.set: ^4.3.2
       luxon: ~2.3.0
+      readonly-proxy: ^0.0.1
       xml2js: ^0.4.23
     dependencies:
       '@n8n_io/riot-tmpl': 1.0.1
@@ -871,6 +872,7 @@ importers:
       lodash.merge: 4.6.2
       lodash.set: 4.3.2
       luxon: 2.3.2
+      readonly-proxy: 0.0.1
       xml2js: 0.4.23
     devDependencies:
       '@types/express': 4.17.14
@@ -18001,6 +18003,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+
+  /readonly-proxy/0.0.1:
+    resolution: {integrity: sha512-gREV8eM+sgt53NbPa3tvHoLQMiidLn2Ym7gablma9Ovxk69pezMwjFew/+H6d5p+9lrprKKVlEnIkcWmkrPchg==}
+    dev: false
 
   /recast/0.20.5:
     resolution: {integrity: sha512-E5qICoPoNL4yU0H0NoBDntNB0Q5oMSNh9usFctYniLBluTthi3RsQVBXIJNbApOlvSwW/RGxIuokPcAc59J5fQ==}

@@ -7,6 +7,7 @@
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
+import { readonlyProxyOf } from 'readonly-proxy';
 import { DateTime, Duration, Interval, Settings } from 'luxon';
 import * as jmespath from 'jmespath';
 
@@ -95,9 +96,9 @@ export class WorkflowDataProxy {
 		this.activeNodeName = activeNodeName;
 		this.workflow = workflow;
 
-		this.runExecutionData = isScriptingNode(activeNodeName, workflow)
-			? deepCopy(runExecutionData)
-			: runExecutionData;
+		this.runExecutionData = runExecutionData
+			? (readonlyProxyOf(runExecutionData) as IRunExecutionData)
+			: null;
 
 		this.connectionInputData = isScriptingNode(activeNodeName, workflow)
 			? deepCopy(connectionInputData)
